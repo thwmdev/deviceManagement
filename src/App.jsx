@@ -15,6 +15,7 @@ function App() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Danh sách tài sản</title>
       </head>
+
       <body>
         <div className="app-shell">
           <aside className="sidebar">
@@ -62,7 +63,7 @@ function App() {
 
             <section className="toolbar">
               <div className="toolbar__left">
-                <button className="text-button" type="button">Nhân</button>
+                <button className="text-button" type="button">Nhãn</button>
                 <button className="text-button" type="button">Export</button>
                 <button className="text-button" type="button">Import</button>
                 <button className="text-button" type="button">HDSD</button>
@@ -272,7 +273,7 @@ function App() {
                     <td>1</td>
                     <td>0</td>
                     <td>1</td>
-                    <td><span class="badge badge--pending">Chờ cấp phát</span></td>
+                    <td><span className="badge badge--pending">Chờ cấp phát</span></td>
                     <td>6,900,000</td>
                     <td></td>
                     <td></td>
