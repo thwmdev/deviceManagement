@@ -1,4 +1,23 @@
+import { useEffect, useState } from "react";
+import { getDevices, deleteDevice } from "../api";
+
 function Assets() {
+  const [devices, setDevices] = useState([]);
+
+  const loadData = () => {
+    getDevices()
+      .then(res => setDevices(res.data))
+      .catch(err => console.error(err));
+  };
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  const handleDelete = (id) => {
+    deleteDevice(id).then(() => loadData());
+  };
+
   return (
     <>
       <h1>Danh sách tài sản</h1>
@@ -6,28 +25,28 @@ function Assets() {
       <table border="1">
         <thead>
           <tr>
-            <th>Mã TS</th>
-            <th>Tên tài sản</th>
-            <th>Trạng thái</th>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Giá</th>
+            <th>Hành động</th>
           </tr>
         </thead>
 
         <tbody>
-          <tr>
-            <td>TS.123</td>
-            <td>Vòng cổ</td>
-            <td>Chờ cấp phát</td>
-          </tr>
-
-          <tr>
-            <td>875</td>
-            <td>Hub Baseus 9in1</td>
-            <td>Đang sử dụng</td>
-          </tr>
+          {devices.map(d => (
+            <tr key={d.id}>
+              <td>{d.id}</td>
+              <td>{d.name}</td>
+              <td>{d.price}</td>
+              <td>
+                <button onClick={() => handleDelete(d.id)}>Xóa</button>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </>
-  )
+  );
 }
 
-export default Assets
+export default Assets;
