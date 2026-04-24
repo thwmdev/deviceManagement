@@ -19,7 +19,13 @@ namespace backend.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var data = _context.Devices.ToList();
+            var data = new List<Device>
+            {
+                new Device { Id = 1, Name = "Laptop", Price = 1500 },
+                new Device { Id = 2, Name = "Chuột", Price = 200 },
+                new Device { Id = 3, Name = "Bàn phím", Price = 500 }
+            };
+
             return Ok(data);
         }
 
