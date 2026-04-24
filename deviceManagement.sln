@@ -1,4 +1,4 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -7,6 +7,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{25503CF3-84EC-52C7-D076-D563439174E3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceManagementAPI", "DeviceManagementAPI\backend\DeviceManagementAPI.csproj", "{EAC658A5-4B56-9510-85C1-5E8B3E013BF1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{06B9CEE8-EAD4-40AC-894D-3B3F37105E79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "backend", "backend\backend.csproj", "{FAA898D4-FBC3-4D88-9B59-24895B7D28C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +22,10 @@ Global
 		{EAC658A5-4B56-9510-85C1-5E8B3E013BF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAC658A5-4B56-9510-85C1-5E8B3E013BF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAC658A5-4B56-9510-85C1-5E8B3E013BF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAA898D4-FBC3-4D88-9B59-24895B7D28C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA898D4-FBC3-4D88-9B59-24895B7D28C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA898D4-FBC3-4D88-9B59-24895B7D28C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA898D4-FBC3-4D88-9B59-24895B7D28C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -25,6 +33,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{25503CF3-84EC-52C7-D076-D563439174E3} = {2CAD22DA-F7ED-D52E-E9D8-9DA925A10A14}
 		{EAC658A5-4B56-9510-85C1-5E8B3E013BF1} = {25503CF3-84EC-52C7-D076-D563439174E3}
+		{FAA898D4-FBC3-4D88-9B59-24895B7D28C8} = {06B9CEE8-EAD4-40AC-894D-3B3F37105E79}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A79D18B0-F47A-4CF8-8D91-E12FCEDB130A}
